@@ -1,5 +1,6 @@
 package com.interview.prep.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.interview.prep.exception.UserNotFoundException;
 import com.interview.prep.model.User;
 import com.interview.prep.model.UserEntity;
@@ -18,7 +19,7 @@ public class IAMController {
     }
 
     @GetMapping("/user")
-    public Optional<Object> checkUser(@RequestParam String username, @RequestParam String password) throws UserNotFoundException {
+    public UserEntity checkUser(@RequestParam String username, @RequestParam String password) throws UserNotFoundException, JsonProcessingException {
          return userServiceImpl.checkUserCredentials(username, password);
     }
 

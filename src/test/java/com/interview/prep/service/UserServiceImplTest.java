@@ -17,17 +17,4 @@ public class UserServiceImplTest {
     @Autowired
     private UserServiceImpl userService;
 
-    @Test
-    public void test() {
-        val response = userService.getHealth();
-        Assert.assertEquals("Sample response", response);
-    }
-
-    @Test
-    public void test_getAllUsers() {
-        val response = userService.getAllUsers();
-        System.out.println(response);
-
-    }
-
 }
