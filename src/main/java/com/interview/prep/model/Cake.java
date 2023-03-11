@@ -9,7 +9,7 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Product {
+public class Cake {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
