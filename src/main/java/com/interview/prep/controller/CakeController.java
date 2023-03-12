@@ -19,7 +19,7 @@ public class CakeController {
     }
 
     @GetMapping("/products")
-    @PreAuthorize("hasRole('ROLE_USER')")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public List<Cake> getAllProducts() {
         return productService.getAllCakes();
     }
